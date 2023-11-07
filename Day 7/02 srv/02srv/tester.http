@@ -1,13 +1,13 @@
-GET http://localhost:4004/CatalogService
+GET http://localhost:4004/odata/v4/CatalogService
 
 ###Read service metadata
-GET http://localhost:4004/CatalogService/$metadata
+GET http://localhost:4004/odata/v4/CatalogService/$metadata
 
 ###Get Top 2 employees
-GET http://localhost:4004/CatalogService/EmployeeSet?$top=2
+GET http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$top=2
 
 ###POST Call - Create new employee
-POST http://localhost:4004/CatalogService/EmployeeSet
+POST http://localhost:4004/odata/v4/CatalogService/EmployeeSet
 Content-Type: application/json
 
 {
@@ -29,10 +29,10 @@ Content-Type: application/json
 }
 
 ###Get the employee which was created
-http://localhost:4004/CatalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C198E8DB
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C198E8DB
 
 ###Update employee Salary
-PATCH http://localhost:4004/CatalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C198E8DB
+PATCH http://localhost:4004/odata/v4/CatalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C198E8DB
 Content-Type: application/json
 
 {
@@ -41,23 +41,23 @@ Content-Type: application/json
 }
 
 ###Display All purchase orders
-http://localhost:4004/CatalogService/POs
+http://localhost:4004/odata/v4/CatalogService/POs
 
 ###Get single PO
-http://localhost:4004/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC34052
+http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC34052
 
 
 ###GET main entity and associated entity together
-http://localhost:4004/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC34052?$expand=Items
+http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC34052?$expand=Items
 
 ###Boosting a order
-POST http://localhost:4004/CatalogService/POs('74867AD200E41EDBA5D8B0C98DC34052')/CatalogService.boost
+POST http://localhost:4004/odata/v4/CatalogService/POs('74867AD200E41EDBA5D8B0C98DC34052')/odata/v4/CatalogService.boost
 Content-Type: application/json
 
 {}
 
 ###Boosting a order
-GET http://localhost:4004/CatalogService/POs('74867AD200E41EDBA5D8B0C98DC34052')/CatalogService.largestOrder()
+GET http://localhost:4004/odata/v4/CatalogService/POs('74867AD200E41EDBA5D8B0C98DC34052')/odata/v4/CatalogService.largestOrder()
 
 ###Custom code - Entity GET
 GET http://localhost:4004/mysrvdemo/ReadEmployeeSrv
