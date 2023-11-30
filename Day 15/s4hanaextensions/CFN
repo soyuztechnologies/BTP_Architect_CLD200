@@ -1,0 +1,16 @@
+#Password=<< Existing password/certificate removed on export >>
+#
+#Sun Sep 04 14:02:54 UTC 2022
+Description=S/4HANA Server Anubhav
+Type=HTTP
+HTML5.DynamicDestination=true
+Authentication=BasicAuthentication
+WebIDEUsage=odata_abap,dev_abap,odata_gen
+Name=S4HANA
+WebIDEEnabled=true
+product.name=SAP S/4HANA
+MobileEnabled=true
+ProxyType=Internet
+URL=http\://103.207.171.202\:8021
+sap-client=800
+User=<user>
